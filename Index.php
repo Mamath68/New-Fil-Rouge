@@ -1,35 +1,73 @@
 <?php
-include('Partiel/header.php');
+namespace Core;
 
-echo "<title>Burnhaupt Musique</title>";
-?>
+define('DS', DIRECTORY_SEPARATOR); // le caractère séparateur de dossier (/ ou \)
+// meilleure portabilité sur les différents systêmes.
+define('BASE_DIR', dirname(__FILE__) . DS); // pour se simplifier la vie
+define('VIEW_DIR', BASE_DIR . "view/"); //le chemin où se trouvent les vues
+define('PUBLIC_DIR', "/public"); //le chemin où se trouvent les fichiers    publics (CSS, JS, IMG)
 
-<ol class="container text-center bg-dark">
-    <img src="Images/bongo.png">
-    <img src="Images/flutte.png">
-    <img src="Images/guitares.png">
-</ol>
+define('DEFAULT_CTRL', 'Home'); //nom du contrôleur par défaut
+define('ADMIN_MAIL', "admin@gmail.com"); //mail de l'administrateur
+// Fait Coreel A l'autoloader dans le dossier Core
+require("core/Autoloader.php");
+
+Autoloader::register();
+
+//démarre une session ou récupère la session actuelle
+session_start();
+//et on intègre la classe Session qui prend la main sur les messages en session
+use Core\Session as Session;
+
+//---------REQUETE HTTP INTERCEPTEE-----------
+$ctrlname = DEFAULT_CTRL; //on prend le controller par défaut
+//ex : index.php?ctrl=home
+if (isset($_GET['ctrl'])) {
+    $ctrlname = $_GET['ctrl'];
+}
+//on construit le namespace de la classe Controller à Coreeller
+$ctrlNS = "controllers\\" . ucfirst($ctrlname) . "Controller";
+//on vérifie que le namespace pointe vers une classe qui existe
+if (!class_exists($ctrlNS)) {
+    //si c'est pas le cas, on choisit le namespace du controller par défaut
+    $ctrlNS = "controller\\" . DEFAULT_CTRL . "Controller";
+}
+// crtl(controller) devient un nouveau NamespaceController
+$ctrl = new $ctrlNS();
+
+$action = "index"; //action par défaut de n'importe quel contrôleur
+//si l'action est présente dans l'url ET que la méthode correspondante existe dans le ctrl
+if (isset($_GET['action']) && method_exists($ctrl, $_GET['action'])) {
+    //la méthode à Coreeller sera celle de l'url
+    $action = $_GET['action'];
+}
+// 
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+} else
+    $id = null;
+
+if (isset($_GET['name'])) {
+    $name = $_GET['name'];
+} else
+    $name = null;
 
 
-<div class="container">
-    <h2>Les types d'instruments</h2>
-    <p>Il existe différents Instruments de Musique, ils sont classés en 3 catégories.</p>
-    <br>
-    <p>Ces catégories sont : </p>
-</div>
-<!--text-primary = couleurs bleu pour le text-->
-<ol class="container text-center text-primary">
-    <!--class="new-font" = nouvelle police d'écriture-->
-    <li class="new-font">Les instruments à vents</li>
-    <li class="new-font">Les instruments à cordes</li>
-    <li class="new-font">Les instruments à percussions</li>
-</ol>
-<br>
-<div class="container">
-    <p> Ces catégories sont elles-mêmes séparés en plusieurs sous-classes que nous vous présenterons dans les pages
-        suivantes.</p>
-</div>
+//ex : HomeController->users(null)
+$result = $ctrl->$action($id);
 
-<div class="fixed-bottom">
-    <?php include('Partiel/footer.php') ?>
-</div>
+/*--------CHARGEMENT PAGE--------*/
+
+if ($action == "ajax") { //si l'action était ajax
+    echo $result; //on affiche directement le return du contrôleur (càd la réponse HTTP sera uniquement celle-ci)
+} else {
+    ob_start(); //démarre un buffer (tampon de sortie)
+    /*la vue s'insère dans le buffer qui devra être vidé au milieu du layout*/
+    include($result['view']);
+    /*je mets cet affichage dans une variable*/
+    $contenu = ob_get_contents();
+    /*j'efface le tampon*/
+    ob_end_clean();
+    /*j'affiche le template principal (layout)*/
+    include VIEW_DIR . "layout.php";
+}

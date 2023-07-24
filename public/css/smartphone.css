@@ -1,0 +1,151 @@
+/* Portrait */
+@media only screen and (device-width : 414px) and (device-height : 896px) and (-webkit-device-pixel-ratio : 2) {
+
+    /*menu déroulant*/
+    .dropdown-hover:hover>.dropdown-menu {
+        display: inline-block;
+    }
+
+    .dropdown-hover>.dropdown-toggle:active {
+        pointer-events: none;
+    }
+
+    /*pour la bannière*/
+    .encadrer_texte {
+        /*bordure de 2pixel, couleurs bleu/gris*/
+        border: 2px solid #819FF7;
+        /*fond de couleurs bleu/gris*/
+        background-color: #819FF7;
+        /*image de fond*/
+        background-image: url(Images/clé-de-sol.png);
+        /*effet de l'image, contenue*/
+        background-size: contain;
+        /*couleur du text, blanc crême*/
+        color: whitesmoke;
+        /*Marge interne de 20pixel*/
+        padding: 20px;
+        /*Marge externe en automatique*/
+        margin: auto;
+        /*text centré*/
+        text-align: center;
+        /*largeur maximum = 100%*/
+        max-width: 100%;
+        /*taille de police de 50pixel*/
+        font-size: 50px;
+        /*position absolue*/
+        display: absolute;
+    }
+
+    /*les image*/
+    img {
+        /*Hauteur : 200 pixel*/
+        height: 200px;
+        /*largeur : 300 pixel*/
+        width: 300px;
+    }
+
+    /*pour le titre des tableaux*/
+    .caption {
+        /*taille police 20pixels*/
+        font-size: 20px;
+        /*couleur text : blanc*/
+        color: white;
+    }
+
+    /*classe complémentaire pour certains tableaux : couleurs blanc crême*/
+    .tableau {
+        color: whitesmoke;
+    }
+
+    /*import d'une famille de police depuis google font*/
+    @import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+    /*attribution d'une famille a une catégorie, en l'occurence les H2(titre de niveau 2)*/
+    h2 {
+        font-family: 'Fasthand', cursive;
+    }
+
+    /*et maintenant, les P(paragraphe) et tout ce qui est lié a la classe "new-font'*/
+    @import url('https://fonts.googleapis.com/css2?family=Freehand&display=swap');
+
+    p,
+    .new-font {
+        font-family: 'Freehand', cursive;
+    }
+}
+
+/* Paysage */
+@media only screen and (device-width : 896px) and (device-height : 414px) and (-webkit-device-pixel-ratio : 2) {
+
+    /*menu déroulant*/
+    .dropdown-hover:hover>.dropdown-menu {
+        display: inline-block;
+    }
+
+    .dropdown-hover>.dropdown-toggle:active {
+        pointer-events: none;
+    }
+
+    /*pour la bannière*/
+    .encadrer_texte {
+        /*bordure de 2pixel, couleurs bleu/gris*/
+        border: 2px solid #819FF7;
+        /*fond de couleurs bleu/gris*/
+        background-color: #819FF7;
+        /*image de fond*/
+        background-image: url(Images/clé-de-sol.png);
+        /*effet de l'image, contenue*/
+        background-size: contain;
+        /*couleur du text, blanc crême*/
+        color: whitesmoke;
+        /*Marge interne de 20pixel*/
+        padding: 20px;
+        /*Marge externe en automatique*/
+        margin: auto;
+        /*text centré*/
+        text-align: center;
+        /*largeur maximum = 100%*/
+        max-width: 100%;
+        /*taille de police de 50pixel*/
+        font-size: 50px;
+        /*position absolue*/
+        display: absolute;
+    }
+
+    /*les image*/
+    img {
+        /*Hauteur : 200 pixel*/
+        height: 200px;
+        /*largeur : 300 pixel*/
+        width: 300px;
+    }
+
+    /*pour le titre des tableaux*/
+    .caption {
+        /*taille police 20pixels*/
+        font-size: 20px;
+        /*couleur text : blanc*/
+        color: white;
+    }
+
+    /*classe complémentaire pour certains tableaux : couleurs blanc crême*/
+    .tableau {
+        color: whitesmoke;
+    }
+
+    /*import d'une famille de police depuis google font*/
+    @import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+    /*attribution d'une famille a une catégorie, en l'occurence les H2(titre de niveau 2)*/
+    h2 {
+        font-family: 'Fasthand', cursive;
+    }
+
+    /*et maintenant, les P(paragraphe) et tout ce qui est lié a la classe "new-font'*/
+    @import url('https://fonts.googleapis.com/css2?family=Freehand&display=swap');
+
+    p,
+    .new-font {
+        font-family: 'Freehand', cursive;
+    }
+}
