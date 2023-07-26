@@ -30,19 +30,19 @@
     <tbody>
         <tr>
             <th class="table-dark text-center tableau">Le Limonaire</th>
-            <td class="text-center"><img src="Images/Limonaire.jpg" alt="Limonaires"></td>
+            <td class="text-center"><img src="public/img/Limonaire.jpg" alt="Limonaires"></td>
         </tr>
         <tr>
             <th class="table-dark text-center tableau">L'orgue de Barbarie</th>
-            <td class="text-center"><img src="Images/Orgue de barbarie.jpg" alt="Orgue de Barbarie"></td>
+            <td class="text-center"><img src="public/img/Orgue-de-barbarie.jpg" alt="Orgue de Barbarie"></td>
         </tr>
         <tr>
             <th class="table-dark text-center tableau">Serinette</th>
-            <td class="text-center"><img src="Images/Serinette.jpg" alt="Serinette"></td>
+            <td class="text-center"><img src="public/img/Serinette.jpg" alt="Serinette"></td>
         </tr>
         <tr>
             <th class="table-dark text-center tableau">Orgue Mécanique</th>
-            <td class="text-center"><img src="Images/Orgue.png" alt="Orgue"></td>
+            <td class="text-center"><img src="public/img/Orgue.png" alt="Orgue"></td>
         </tr>
     </tbody>
 </table>

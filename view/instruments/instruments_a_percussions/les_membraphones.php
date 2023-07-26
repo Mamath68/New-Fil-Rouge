@@ -34,19 +34,19 @@
         <tr>
             <!--td = Cellule-->
             <td class="table-dark text-center tableau">Alfaia</td>
-            <td class="text-center"><img src="Images/Ailfaia.png" alt="Alfaia"></td>
+            <td class="text-center"><img src="public/img/Ailfaia.png" alt="Alfaia"></td>
         </tr>
         <tr>
             <td class="table-dark text-center tableau">Tama</td>
-            <td class="text-center"><img src="Images/Tama.png" alt="Tama"></td>
+            <td class="text-center"><img src="public/img/Tama.png" alt="Tama"></td>
         </tr>
         <tr>
             <td class="table-dark text-center tableau">Bombo</td>
-            <td class="text-center"><img src="Images/Bombos.png" alt="Bombos"></td>
+            <td class="text-center"><img src="public/img/Bombos.png" alt="Bombos"></td>
         </tr>
         <tr>
             <td class="table-dark text-center tableau">Tam-Tam</td>
-            <td class="text-center"><img src="Images/Tam_tam.png" alt="Tam-Tam"></td>
+            <td class="text-center"><img src="public/img/Tam_tam.png" alt="Tam-Tam"></td>
         </tr>
     </tbody>
 

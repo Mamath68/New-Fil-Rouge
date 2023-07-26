@@ -27,22 +27,22 @@
             <!--td = Cellule-->
             <td class="table-dark text-center tableau">Mvett</td>
             <td class="table-dark text-center tableau">Instrument sur baton (cithare)</td>
-            <td class="text-center"><img src="Images/Mvet.png" alt="Mvett à 4 calebasses"></td>
+            <td class="text-center"><img src="public/img/Mvet.png" alt="Mvett à 4 calebasses"></td>
         </tr>
         <tr class="text-center">
             <td class="table-dark text-center tableau">Valiha(cithare)</td>
             <td class="table-dark text-center tableau"> Instrument Tubulaire</td>
-            <td class="text-center"><img src="Images/Valiha.png" alt="Valiha"></td>
+            <td class="text-center"><img src="public/img/Valiha.png" alt="Valiha"></td>
         </tr>
         <tr class="text-center">
             <td class="table-dark text-center tableau">Balalaïka(luth)</td>
             <td class="table-dark text-center tableau">luth à manche long</td>
-            <td class="text-center"><img src="Images/Balalaïka.png" alt="Balalaïka(luth)"></td>
+            <td class="text-center"><img src="public/img/Balalaïka.png" alt="Balalaïka(luth)"></td>
         </tr>
         <tr class="text-center">
             <td class="table-dark text-center tableau">Guitare(luth)</td>
             <!--colspan="2" = fusion de 2 colonne-->
-            <td colspan="2" class="text-center"><img src="Images/guitares.png" alt="Guitare"></td>
+            <td colspan="2" class="text-center"><img src="public/img/guitares.png" alt="Guitare"></td>
         </tr>
     </tbody>
 </table>

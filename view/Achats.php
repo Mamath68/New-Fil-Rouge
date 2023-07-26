@@ -137,23 +137,23 @@ $arrCat = $db->query($strRqCat)->fetchAll();
 			<tr>
 				<!--colonne-->
 				<td>
-					<?php echo $arrDetArticle['articles_lib']; ?>
+					<?=$arrDetArticle['articles_lib']?>
 				</td>
 				<td>
-					<?php echo $arrDetArticle['provider_name']; ?>
+					<?=$arrDetArticle['provider_name']?>
 				</td>
 				<td>
-					<?php echo "<img src=\"Images/Instruments/" . $arrDetArticle['articles_img'] . "\">";
-					$arrDetArticle['articles_img']; ?>
+					<img src="public/img/Instruments/<?= $arrDetArticle['articles_img'] ?>">
+					<?= $arrDetArticle['articles_img'] ?>
 				</td>
 				<td>
-					<?php echo $arrDetArticle['articles_sellprice']; ?> €
+					<?=$arrDetArticle['articles_sellprice'] ?> €
 				</td>
 				<td>
-					<?php echo $arrDetArticle['articles_stock']; ?>
+					<?=$arrDetArticle['articles_stock']?>
 				</td>
 				<td>
-					<?php echo $arrDetArticle['articles_cat']; ?>
+					<?=$arrDetArticle['articles_cat']?>
 				</td>
 
 			</tr>

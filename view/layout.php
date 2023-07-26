@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +38,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" href="#">Présentation</a>
+                        <a class="nav-link" href="index.php?ctrl=Instrument&action=findAllInstrument">Présentation</a>
                         <a class="nav-link" href="#">Achat</a>
                     </div>
                 </div>
@@ -49,9 +48,12 @@
     <main>
         <?= $contenu ?>
         <?php include_once("Contact/comment_button.php") ?>
+        <a href="#" class="go_top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
     </main>
 
-    <footer class="text-center text-white" style="background-color: #0a4275;">
+    <footer class="text-center text-white" style="">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
             <!-- Section: CTA -->
@@ -65,7 +67,7 @@
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-center p-3 footer">
 
             <a class="text-white" href="index.php?ctrl=home&action=about" target="_blank">A
                 Propos</a>

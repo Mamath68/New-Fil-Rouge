@@ -1,8 +1,4 @@
-<?php
-include('Partiel/header.php');
 
-echo "<title>Instruments à Percussions - Les idiophones</title>";
-?>
 <br>
 <div class="container">
     <p>Les idiophones sont classé en plusieurs catégories :
@@ -32,22 +28,22 @@ echo "<title>Instruments à Percussions - Les idiophones</title>";
             <!--td = Cellule-->
             <td class="table-dark text-center tableau">Marimba</td>
             <td class="table-dark text-center tableau">Xilophones</td>
-            <td class="text-center"><img src="Images/Marimba.png" alt="Marimba"></td>
+            <td class="text-center"><img src="public/img/Marimba.png" alt="Marimba"></td>
         </tr>
         <tr>
             <td class="table-dark text-center tableau">Glockenspiel</td>
             <td class="table-dark text-center tableau"> Métalophones</td>
-            <td class="text-center"><img src="Images/Glockenspiel.png" alt="Glockenspiel"></td>
+            <td class="text-center"><img src="public/img/Glockenspiel.png" alt="Glockenspiel"></td>
         </tr>
         <tr>
             <td class="table-dark text-center tableau">Handpan</td>
             <td class="table-dark text-center tableau">Metalophone</td>
-            <td class="text-center"><img src="Images/handpan.png" alt="Handpan"></td>
+            <td class="text-center"><img src="public/img/handpan.png" alt="Handpan"></td>
         </tr>
         <tr>
             <td class="table-dark text-center tableau">Gong</td>
             <td class="table-dark text-center tableau">idiophones à 1 note</td>
-            <td colspan="2" class="text-center"><img src="Images/Gong.png" alt="Gong"></td>
+            <td colspan="2" class="text-center"><img src="public/img/Gong.png" alt="Gong"></td>
         </tr>
     </tbody>
 

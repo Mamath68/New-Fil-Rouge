@@ -44,23 +44,23 @@
     <tbody>
         <tr>
             <th class="table-dark text-center tableau">La Trompette (en métal)</th>
-            <td class="text-center"><img src="Images/Trompette.png" alt="Trompette"></td>
+            <td class="text-center"><img src="public/img/Trompette.png" alt="Trompette"></td>
         </tr>
         <tr>
             <th class="table-dark text-center tableau">Cimbasso</th>
-            <td class="text-center"><img src="Images/cimbasso.png" alt="Cimbasso"></td>
+            <td class="text-center"><img src="public/img/cimbasso.png" alt="Cimbasso"></td>
         </tr>
         <tr>
             <th class="table-dark text-center tableau">Le Didgeridoo (Bois)</th>
-            <td class="text-center"><img src="Images/didgeridoo.png" alt="Didgeridoo"></td>
+            <td class="text-center"><img src="public/img/didgeridoo.png" alt="Didgeridoo"></td>
         </tr>
         <tr>
             <th class="table-dark text-center tableau">L'Olifant (Ivoire)</th>
-            <td class="text-center"><img src="Images/Olifant.png" alt="Olifan"></td>
+            <td class="text-center"><img src="public/img/Olifant.png" alt="Olifan"></td>
         </tr>
         <tr>
             <th class="table-dark text-center tableau">Cor de chasse</th>
-            <td class="text-center"><img src="Images/Cor de chasse.png" alt="Cor de chasse"></td>
+            <td class="text-center"><img src="public/img/Cor-de-chasse.png" alt="Cor de chasse"></td>
         </tr>
     </tbody>
 </table>

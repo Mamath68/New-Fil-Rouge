@@ -29,27 +29,27 @@
         <tr>
             <td class="table-dark text-center tableau">Flutte</td>
             <td class="table-dark text-center tableau">Instruments à conduits<br>(Biseau)</td>
-            <td class="text-center"><img src="Images/flûtte_à_bec.png" alt="flûtte à bec"></td>
+            <td class="text-center"><img src="public/img/flûtte_à_bec.png" alt="flûtte à bec"></td>
         </tr>
         <tr>
             <td class="table-dark text-center tableau">Siku</td>
             <td class="table-dark text-center tableau">Instrument à embouchure libre<br>(Biseau)</td>
-            <td class="text-center"><img src="Images/Siku.png" alt="Le siku"></td>
+            <td class="text-center"><img src="public/img/Siku.png" alt="Le siku"></td>
         </tr>
         <tr>
             <td class="table-dark text-center tableau">Harmonica</td>
             <td class="table-dark text-center tableau">Instrument à anche libre<br>(Anche)</td>
-            <td class="text-center"><img src="Images/Harmonica.png" alt="Harmonica"></td>
+            <td class="text-center"><img src="public/img/Harmonica.png" alt="Harmonica"></td>
         </tr>
         <tr>
             <td class="table-dark text-center tableau">Saxophone</td>
             <td class="table-dark text-center tableau">Instrument à anche simple<br>(Anche)</td>
-            <td class="text-center"><img src="Images/Saxophone.png" alt="Saxophone"></td>
+            <td class="text-center"><img src="public/img/Saxophone.png" alt="Saxophone"></td>
         </tr>
         <tr>
             <th class="table-dark text-center tableau">Hautbois</th>
             <td class="table-dark text-center tableau">Instrument à anche double<br>(Anche)</td>
-            <td class="text-center"><img src="Images/Hautbois.png" alt="Hautbois"></td>
+            <td class="text-center"><img src="public/img/Hautbois.png" alt="Hautbois"></td>
         </tr>
     </tbody>
 </table>
