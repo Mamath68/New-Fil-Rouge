@@ -1,9 +1,7 @@
 <?php
 /*$strRqArticle = "SELECT * FROM articles";*/
 $strPage = "article";
-include('Partiel/connect.php');
 
-echo "<title>Acheter</title>";
 //intCat = catégories en integral
 $intCat = $_POST['cat'] ?? '';
 //strLib = Libéllé en strings
@@ -137,23 +135,23 @@ $arrCat = $db->query($strRqCat)->fetchAll();
 			<tr>
 				<!--colonne-->
 				<td>
-					<?=$arrDetArticle['articles_lib']?>
+					<?= $arrDetArticle['articles_lib'] ?>
 				</td>
 				<td>
-					<?=$arrDetArticle['provider_name']?>
+					<?= $arrDetArticle['provider_name'] ?>
 				</td>
 				<td>
 					<img src="public/img/Instruments/<?= $arrDetArticle['articles_img'] ?>">
 					<?= $arrDetArticle['articles_img'] ?>
 				</td>
 				<td>
-					<?=$arrDetArticle['articles_sellprice'] ?> €
+					<?= $arrDetArticle['articles_sellprice'] ?> €
 				</td>
 				<td>
-					<?=$arrDetArticle['articles_stock']?>
+					<?= $arrDetArticle['articles_stock'] ?>
 				</td>
 				<td>
-					<?=$arrDetArticle['articles_cat']?>
+					<?= $arrDetArticle['articles_cat'] ?>
 				</td>
 
 			</tr>
@@ -164,6 +162,6 @@ $arrCat = $db->query($strRqCat)->fetchAll();
 	</tbody>
 </table>
 
-</body>
+<?php
 
-</html>
+$title = "Boutique";
