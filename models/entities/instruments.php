@@ -11,6 +11,7 @@ final class Instruments extends Entity
     private $name;
     private $img;
     private $category;
+    private $subcategory;
 
     public function __construct($data)
     {
@@ -57,8 +58,18 @@ final class Instruments extends Entity
         $this->category = $category;
     }
 
+    public function getSubcategory()
+    {
+        return $this->subcategory;
+    }
+
+    public function setSubcategory($subcategory)
+    {
+        $this->subcategory = $subcategory;
+    }
     public function __toString()
     {
-        return $this->getId() . " " . $this->getName() . " " . $this->getImg() . " " . $this->getCategory();
+        return $this->getId() . " " . $this->getName() . " " . $this->getImg() . " " . $this->getCategory() . "" . $this->getSubcategory();
     }
+
 }

@@ -19,7 +19,7 @@ class SubCategoryManager extends Manager
 
     public function findSubcategoryById($id)
     {
-        $sql = "SELECT c.id_category, sc.id_subCategory,sc.name
+        $sql = "SELECT c.id_category, sc.id_subcategory, sc.name
         FROM " . $this->tableName . " sc
         INNER JOIN category c 
         ON c.id_category = sc.category_id

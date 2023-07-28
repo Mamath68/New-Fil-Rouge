@@ -19,10 +19,8 @@ class InstrumentManager extends Manager
 
     public function findInstrumentById($id)
     {
-        $sql = "SELECT i.id_instruments, i.name, i.img, c.id_category, c.libelle, sc.id_subCategory, sc.name
+        $sql = "SELECT i.id_instruments, i.type,i.name,i.img, sc.id_subCategory
         FROM " . $this->tableName . " i
-        INNER JOIN category c 
-        ON c.id_category = i.category_id
         INNER JOIN subcategory sc 
         ON sc.id_subCategory = i.subcategory_id
         WHERE i.subcategory_id = :id";
