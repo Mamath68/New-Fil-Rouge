@@ -4,13 +4,14 @@ namespace Models\Entities;
 
 use Core\Entity;
 
-final class Instruments extends Entity
+final class Presentation extends Entity
 {
 
     private $id;
     private $name;
     private $img;
     private $category;
+    private $subcategory;
 
     public function __construct($data)
     {
@@ -42,7 +43,7 @@ final class Instruments extends Entity
         return $this->img;
     }
 
-    public function setImage($img)
+    public function setImg($img)
     {
         $this->img = $img;
     }
@@ -57,8 +58,17 @@ final class Instruments extends Entity
         $this->category = $category;
     }
 
+    public function getSubcategory()
+    {
+        return $this->subcategory;
+    }
+
+    public function setSubcategory($subcategory)
+    {
+        $this->subcategory = $subcategory;
+    }
     public function __toString()
     {
-        return $this->getId() . " " . $this->getName() . " " . $this->getImg() . " " . $this->getCategory();
+        return $this->getId() . " " . $this->getName() . " " . $this->getImg() . " " . $this->getCategory() . "" . $this->getSubcategory();
     }
 }

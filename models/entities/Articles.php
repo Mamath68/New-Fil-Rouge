@@ -4,13 +4,16 @@ namespace Models\Entities;
 
 use Core\Entity;
 
-final class Anime extends Entity
+final class Articles extends Entity
 {
 
     private $id;
-    private $animeName;
-    private $histoire;
+    private $libelle;
+    private $stock;
     private $img;
+    private $sellprice;
+    private $provider;
+    private $category;
 
     public function __construct($data)
     {
@@ -27,25 +30,6 @@ final class Anime extends Entity
         $this->id = $id;
     }
 
-    public function getAnimeName()
-    {
-        return $this->animeName;
-    }
-
-    public function setAnimeName($animeName)
-    {
-        $this->animeName = $animeName;
-    }
-
-    public function getHistoire()
-    {
-        return $this->histoire;
-    }
-
-    public function setHistoire($histoire)
-    {
-        $this->histoire = $histoire;
-    }
     public function getImg()
     {
         return $this->img;
@@ -56,9 +40,57 @@ final class Anime extends Entity
         $this->img = $img;
     }
 
-    public function __toString()
+    public function getLibelle()
     {
-        return $this->getId() . " " . $this->getAnimeName() . " " . $this->getHistoire() . " " . $this->getImg();
+        return $this->libelle;
     }
 
+    public function setLibelle($libelle)
+    {
+        $this->libelle = $libelle;
+    }
+
+    public function getStock()
+    {
+        return $this->stock;
+    }
+
+    public function setStock($stock)
+    {
+        $this->stock = $stock;
+    }
+
+    public function getSellprice()
+    {
+        return $this->sellprice;
+    }
+
+    public function setSellprice($sellprice)
+    {
+        $this->sellprice = $sellprice;
+    }
+
+    public function getProvider()
+    {
+        return $this->provider;
+    }
+
+    public function setProvider($provider)
+    {
+        $this->provider = $provider;
+    }
+
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    public function setCategory($category)
+    {
+        $this->category = $category;
+    }
+    public function __toString()
+    {
+        return $this->getId() . " " . $this->getLibelle() . " " . $this->getStock() . " " . $this->getImg() . " " . $this->getSellprice() . " " . $this->getProvider() . " " . $this->getCategory();
+    }
 }

@@ -5,11 +5,11 @@ namespace Models\Managers;
 use Core\Manager;
 use Core\DAO;
 
-class InstrumentManager extends Manager
+class CategoryManager extends Manager
 {
 
-    protected $className = "Models\Entities\Instruments";
-    protected $tableName = "instruments";
+    protected $className = "Models\Entities\Category";
+    protected $tableName = "category";
 
     public function __construct()
     {
@@ -17,7 +17,7 @@ class InstrumentManager extends Manager
     }
 
 
-    public function findInstrumentById($id)
+    public function findCategoryById($id)
     {
         $sql = "SELECT i.id_instruments, i.name, i.img, c.id_category, c.libelle, sc.id_subCategory, sc.name
         FROM " . $this->tableName . " i

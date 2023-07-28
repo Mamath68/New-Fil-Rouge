@@ -4,15 +4,14 @@ namespace Models\Entities;
 
 use Core\Entity;
 
-final class Comment extends Entity
+final class Providers extends Entity
 {
 
     private $id;
-    private $userId;
-    private $publicationId;
-    private $body;
-    private $image;
-    private \DateTime $commentDate;
+    private $name;
+    private $adresse;
+    private $cp;
+    private $city;
 
     public function __construct($data)
     {
@@ -29,61 +28,48 @@ final class Comment extends Entity
         $this->id = $id;
     }
 
-    public function getUserId()
+    public function getName()
     {
-        return $this->userId;
+        return $this->name;
     }
 
-    public function setUserId($userId)
+    public function setName($name)
     {
-        $this->userId = $userId;
+        $this->name = $name;
     }
 
-    public function getPublicationId()
+    public function getAdresse()
     {
-        return $this->publicationId;
+        return $this->adresse;
     }
 
-    public function setPublicationId($publicationId)
+    public function setAdresse($adresse)
     {
-        $this->publicationId = $publicationId;
+        $this->adresse = $adresse;
     }
 
-    public function getBody()
+    public function getCp()
     {
-        return $this->body;
+        return $this->cp;
     }
 
-    public function setBody($body)
+    public function setCp($cp)
     {
-        $this->body = $body;
+        $this->cp = $cp;
     }
 
-    public function getImage()
+    public function getCity()
     {
-        return $this->image;
+        return $this->city;
     }
 
-    public function setImage($image)
+    public function setCity($city)
     {
-        $this->image = $image;
-    }
-
-    public function getCommentDate()
-    {
-        return $this->commentDate->format("d/m/Y à H:i");
-    }
-
-    public function setCommentDate($date)
-    {
-        $this->commentDate = new \DateTime($date);
-        return $this;
+        $this->city = $city;
     }
 
     public function __toString()
     {
-        return $this->getId() . $this->getUserId() . " " . $this->getPublicationId() . " " . $this->getBody() . " " . $this->getImage() . " " . $this->getCommentDate();
+        return $this->getId() . " " . $this->getName() . " " . " " . $this->getAdresse() . " " . $this->getCity() . "" . $this->getCp();
     }
-
-
 }

@@ -1,49 +1,31 @@
+<?php
+$presentations = $result["data"]["presentation"];
+?>
 <div class="container">
     <h2>Les types d'instruments</h2>
-    <p>Il existe différents Instruments de Musique, ils sont classés en 3 catégories.</p>
+    <p>Il existe différents Instruments de Musique, ils sont classés en 3 Familles.</p>
     <br>
-    <p>Ces catégories sont : </p>
+    <p>Ces familles sont : </p>
 </div>
-<!--text-primary = couleurs bleu pour le text-->
 
 <table class="table">
-    <tr>
-        <td>
-            <li class="new-font"><a href="index.php?ctrl=instrument&action=windInstrument" target="_blank">Les
-                    instruments à
-                    vents</a></li>
-        </td>
-        <td> <img src="public/img/flutte.png">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <li class="new-font"><a href="index.php?ctrl=instrument&action=cordInstrument" target="_blank">Les
-                    instruments à
-                    cordes</a></li>
-        </td>
-        <td> <img src="public/img/guitares.png">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <li class="new-font"><a href="index.php?ctrl=instrument&action=strikInstrument" target="_blank">Les
-                    instruments à
-                    percussions</a></li>
-        </td>
-        <td><img src="public/img/bongo.png"></td>
-    </tr>
+    <?php
+    foreach ($presentations as $presentation) {
+        ?>
+        <tr>
+            <td>
+                <li class="new-font"><a href="index.php?ctrl=instrument&action=detailCategory&id=<?=$presentation->getId()?>" target="_blank">
+                        <?= $presentation->getCategory()->getLibelle() ?>
+                    </a></li>
+            </td>
+            <td> <img src="public/img/<?= $presentation->getImg() ?>" alt="Instrument">
+            </td>
+        </tr>
+
+        <?php
+    }
+    ?>
 </table>
-<!-- <ol class="container text-center text-primary">
-    class="new-font" = nouvelle police d'écriture
-
-
-
-</ol>
-
-<ol class="text-center bg-dark banniere">
-
-</ol> -->
 
 <?php
 $title = "Présentation"
