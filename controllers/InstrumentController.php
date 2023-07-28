@@ -47,8 +47,10 @@ class InstrumentController extends AbstractController implements ControllerInter
             $this->redirectTo("instrument", "windInstrument", $id);
         } elseif ($id == 2) {
             $this->redirectTo("instrument", "cordInstrument", $id);
-        } else {
+        } elseif($id == 3) {
             $this->redirectTo("instrument", "strikInstrument", $id);
+        } else{
+            $this->redirectTo("instrument", "index");
         }
     }
     public function windInstrument($id)
