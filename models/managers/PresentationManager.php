@@ -26,6 +26,21 @@ class PresentationManager extends Manager
         return $this->getMultipleResults(
             DAO::select($sql),
             $this->className
+
+        );
+    }
+    public function findInstrumentById($id)
+    {
+        $sql = "SELECT p.*, c.*
+                FROM " . $this->tableName . " p
+                INNER JOIN category c 
+                ON c.id_category = p.category_id
+                WHERE p.category_id = :id";
+
+        return $this->getMultipleResults(
+            DAO::select($sql, ['id' => $id], true),
+            $this->className
+
         );
     }
 }

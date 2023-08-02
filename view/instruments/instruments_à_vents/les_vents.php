@@ -9,7 +9,7 @@ $wind = $result['data']['wind']
         foreach ($wind as $vent) {
             ?>
         <ol>
-            <li class="new-font"><a href="index.php?ctrl=instrument&action=detailwind&id<?= $vent->getId() ?>"
+            <li class="new-font"><a href="index.php?ctrl=Instrument&action=detailwind&id=<?= $vent->getId() ?>"
                     target="_blank"><?= $vent->getName() ?></a></li>
         </ol>
 

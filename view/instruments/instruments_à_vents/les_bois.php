@@ -27,19 +27,17 @@
     </thead>
     <tbody>
         <?php
-        foreach ($variable as $key => $value) {
+        // foreach ($variable as $key => $value) {
             ?>
             <tr>
-                <td class="table-dark text-center tableau">
-                    <? ?>
+                <td class="text-center tableau">
                 </td>
-                <td class="table-dark text-center tableau">
-                    <? ?>
+                <td class="text-center tableau">
                 </td>
-                <td class="text-center"><img src="public/img/<? ?>" alt="<? ?>"></td>
+                <!-- <td class="text-center"><img src="public/img/" alt="..."></td> -->
             </tr>
             <?php
-        }
+        // }
         ?>
 
     </tbody>

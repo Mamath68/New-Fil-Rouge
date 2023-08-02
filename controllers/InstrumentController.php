@@ -38,34 +38,77 @@ class InstrumentController extends AbstractController implements ControllerInter
         ];
     }
 
+    const FRAPP_INSTRUMENT_ID = 1;
+    const FROTTE_INSTRUMENT_ID = 2;
+    const PINCE_INSTRUMENT_ID = 3;
+
+    public function detailCord($id)
+    {
+        if ($id == self::FRAPP_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "frapInstrument", $id);
+        } elseif ($id == self::FROTTE_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "frotInstrument", $id);
+        } elseif ($id == self::PINCE_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "pinceInstrument", $id);
+        } else {
+            $this->redirectTo("Instrument", "index");
+        }
+    }
+
+    const ELECTRO_INSTRUMENT_ID = 4;
+    const IDIO_INSTRUMENT_ID = 5;
+    const MEMBRO_INSTRUMENT_ID = 6;
+
+    public function detailStrik($id)
+    {
+        if ($id == self::ELECTRO_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "electroInstrument", $id);
+        } elseif ($id == self::IDIO_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "idioInstrument", $id);
+        } elseif ($id == self::MEMBRO_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "membraInstrument", $id);
+        } else {
+            $this->redirectTo("Instrument", "index");
+        }
+    }
+    
+    const WIND_INSTRUMENT_ID = 1;
+    const CORD_INSTRUMENT_ID = 2;
+    const STRIK_INSTRUMENT_ID = 3;
+
     public function detailCategory($id)
     {
-
-        if ($id == 1) {
-            $this->redirectTo("instrument", "windInstrument", $id);
-        } elseif ($id == 2) {
-            $this->redirectTo("instrument", "cordInstrument", $id);
-        } elseif ($id == 3) {
-            $this->redirectTo("instrument", "strikInstrument", $id);
+        if ($id == self::WIND_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "windInstrument", $id);
+        } elseif ($id == self::CORD_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "cordInstrument", $id);
+        } elseif ($id == self::STRIK_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "strikInstrument", $id);
         } else {
-            $this->redirectTo("instrument", "index");
+            $this->redirectTo("Instrument", "index");
         }
     }
+
+    const WOOD_INSTRUMENT_ID = 7;
+    const CUIVRE_INSTRUMENT_ID = 8;
+    const ELECTRON_INSTRUMENT_ID = 9;
+    const MECA_INSTRUMENT_ID = 10;
+
     public function detailWind($id)
     {
-
-        if ($id == 7) {
-            $this->redirectTo("instrument", "woodInstrument", $id);
-        } elseif ($id == 8) {
-            $this->redirectTo("instrument", "cuivreInstrument", $id);
-        } elseif ($id == 9) {
-            $this->redirectTo("instrument", "electronInstrument", $id);
-        } elseif ($id == 10) {
-            $this->redirectTo("instrument", "mecaInstrument", $id);
+        if ($id == self::WOOD_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "woodInstrument", $id);
+        } elseif ($id == self::CUIVRE_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "cuivreInstrument", $id);
+        } elseif ($id == self::ELECTRON_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "electronInstrument", $id);
+        } elseif ($id == self::MECA_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "mecaInstrument", $id);
         } else {
-            $this->redirectTo("instrument", "index");
+            $this->redirectTo("Instrument", "index");
         }
     }
+
     public function windInstrument($id)
     {
         $subCatManager = new SubCategoryManager();
@@ -76,6 +119,7 @@ class InstrumentController extends AbstractController implements ControllerInter
             ]
         ];
     }
+
     public function mecaInstrument($id)
     {
         $instrumentManager = new InstrumentManager();
@@ -97,6 +141,7 @@ class InstrumentController extends AbstractController implements ControllerInter
             ]
         ];
     }
+
     public function electronInstrument($id)
     {
         $instrumentManager = new InstrumentManager();
@@ -108,6 +153,7 @@ class InstrumentController extends AbstractController implements ControllerInter
         ];
 
     }
+
     public function woodInstrument($id)
     {
         $instrumentManager = new InstrumentManager();
@@ -119,6 +165,7 @@ class InstrumentController extends AbstractController implements ControllerInter
         ];
 
     }
+
     public function cordInstrument($id)
     {
         $subCatManager = new SubCategoryManager();
@@ -129,18 +176,21 @@ class InstrumentController extends AbstractController implements ControllerInter
             ]
         ];
     }
+
     public function frapInstrument()
     {
         return [
             "view" => VIEW_DIR . "instruments/instruments_a_cordes/cordes_frappees.php",
         ];
     }
+
     public function frotInstrument()
     {
         return [
             "view" => VIEW_DIR . "instruments/instruments_a_cordes/cordes_frottees.php",
         ];
     }
+
     public function pinceInstrument()
     {
         return [
@@ -157,28 +207,25 @@ class InstrumentController extends AbstractController implements ControllerInter
             ]
         ];
     }
+
     public function electroInstrument()
     {
         return [
             "view" => VIEW_DIR . "instruments/instruments_a_percussions/les_electrophones.php",
         ];
     }
+
     public function idioInstrument()
     {
         return [
             "view" => VIEW_DIR . "instruments/instruments_a_percussions/les_idiophones.php",
         ];
     }
+
     public function membraInstrument()
     {
         return [
             "view" => VIEW_DIR . "instruments/instruments_a_percussions/les_membraphones.php",
         ];
     }
-    // public function findInstrumentById($id)
-    // {
-
-
-    // }
-
 }
