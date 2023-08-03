@@ -15,7 +15,7 @@
         des lèvres.
         <br>
         Ainsi, même si la majorité des cuivres modernes sont en laiton :
-    <ol>
+    <ul>
         <li class="new-font">Certains « cuivres » ne sont pas en métal, mais en bois (comme le cor des Alpes ou le
             didgeridoo), en bois
             recouvert de cuir (cornets à bouquin et serpents), en fibre de verre (certains soubassophones). Les «
@@ -27,7 +27,7 @@
             pas partie des « cuivres » au sens défini précédemment, car le principe d'émission diffère. C'est le cas du
             saxophone, qui appartient à la famille des bois – bien qu'il soit majoritairement composé de laiton, la
             vibration est produite par une anche simple en roseau, et non les lèvres du musicien.</li>
-    </ol>
+    </ul>
     </p>
 </div>
 <br>

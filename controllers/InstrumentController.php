@@ -38,6 +38,23 @@ class InstrumentController extends AbstractController implements ControllerInter
         ];
     }
 
+    const WIND_INSTRUMENT_ID = 1;
+    const CORD_INSTRUMENT_ID = 2;
+    const STRIK_INSTRUMENT_ID = 3;
+
+    public function detailCategory($id)
+    {
+        if ($id == self::WIND_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "windInstrument", $id);
+        } elseif ($id == self::CORD_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "cordInstrument", $id);
+        } elseif ($id == self::STRIK_INSTRUMENT_ID) {
+            $this->redirectTo("Instrument", "strikInstrument", $id);
+        } else {
+            $this->redirectTo("Instrument", "index");
+        }
+    }
+
     const FRAPP_INSTRUMENT_ID = 1;
     const FROTTE_INSTRUMENT_ID = 2;
     const PINCE_INSTRUMENT_ID = 3;
@@ -71,23 +88,7 @@ class InstrumentController extends AbstractController implements ControllerInter
             $this->redirectTo("Instrument", "index");
         }
     }
-    
-    const WIND_INSTRUMENT_ID = 1;
-    const CORD_INSTRUMENT_ID = 2;
-    const STRIK_INSTRUMENT_ID = 3;
 
-    public function detailCategory($id)
-    {
-        if ($id == self::WIND_INSTRUMENT_ID) {
-            $this->redirectTo("Instrument", "windInstrument", $id);
-        } elseif ($id == self::CORD_INSTRUMENT_ID) {
-            $this->redirectTo("Instrument", "cordInstrument", $id);
-        } elseif ($id == self::STRIK_INSTRUMENT_ID) {
-            $this->redirectTo("Instrument", "strikInstrument", $id);
-        } else {
-            $this->redirectTo("Instrument", "index");
-        }
-    }
 
     const WOOD_INSTRUMENT_ID = 7;
     const CUIVRE_INSTRUMENT_ID = 8;

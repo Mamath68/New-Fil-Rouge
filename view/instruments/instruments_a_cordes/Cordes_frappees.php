@@ -4,10 +4,10 @@
     <br>
     <p> Ils seront classé selon les 4 continent, a savoir:
     <ol class="instruments">
-        <li class="new-font">Afrique</li>
-        <li class="new-font">Amérique</li>
-        <li class="new-font">Asie</li>
-        <li class="new-font">Europe</li>
+        <li class="new-font listnone">Afrique</li>
+        <li class="new-font listnone">Amérique</li>
+        <li class="new-font listnone">Asie</li>
+        <li class="new-font listnone">Europe</li>
     </ol>
     </p>
 </div>

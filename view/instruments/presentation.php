@@ -14,7 +14,7 @@ $presentations = $result["data"]["presentation"];
         ?>
         <tr>
             <td>
-                <li class="new-font"><a href="index.php?ctrl=instrument&action=detailCategory&id=<?=$presentation->getId()?>" target="_blank">
+                <li class="new-font listnone"><a href="index.php?ctrl=instrument&action=detailCategory&id=<?=$presentation->getId()?>" target="_blank">
                         <?= $presentation->getCategory()->getLibelle() ?>
                     </a></li>
             </td>

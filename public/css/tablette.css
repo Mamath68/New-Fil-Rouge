@@ -66,13 +66,11 @@ p,
 .new-font {
     font-family: 'Freehand', cursive;
 }
-
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (device-width :1180px) and (device-height : 820px) and (-webkit-device-pixel-ratio : 2) {
-
-   /*menu déroulant*/
+/*menu déroulant*/
 .dropdown-hover:hover>.dropdown-menu {
     display: inline-block;
 }
@@ -137,4 +135,5 @@ p,
 .new-font {
     font-family: 'Freehand', cursive;
 }
+
 }

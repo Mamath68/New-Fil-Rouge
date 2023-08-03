@@ -1,7 +1,7 @@
 <div class="container">
     <p>Les instruments de musique mécanique permettent de jouer la musique contenue sur un support. Celui-ci peut être
         de nombreuses natures, en voici les principales :</p>
-    <ol>
+    <ul>
         <li class="new-font">Bande de papier ou de carton perforé, essentiellement utilisée pour les grands orgues
             limonaires et les
             orgues de Barbarie car la longueur du morceau peut être importante;</li>
@@ -11,7 +11,7 @@
         <li class="new-font">Disque embossé, perforé, pressé, utilisé dans une grande diversité d'instruments ou
             appareils, allant du
             Polyphon au Gramophone.</li>
-    </ol>
+    </ul>
     <p>Désormais, les instruments mécaniques peuvent emprunter la technique MIDI (Musical Instrument Digital Interface)
         et
         restituer directement depuis un support électronique.</p>

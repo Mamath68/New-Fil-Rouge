@@ -8,6 +8,7 @@ final class Instruments extends Entity
 {
 
     private $id;
+    private $type;
     private $name;
     private $img;
     private $category;
@@ -26,6 +27,16 @@ final class Instruments extends Entity
     public function setId($id)
     {
         $this->id = $id;
+    }
+
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    public function setType($type)
+    {
+        $this->type = $type;
     }
 
     public function getName()
@@ -69,7 +80,7 @@ final class Instruments extends Entity
     }
     public function __toString()
     {
-        return $this->getId() . " " . $this->getName() . " " . $this->getImg() . " " . $this->getCategory() . "" . $this->getSubcategory();
+        return $this->getId() . " " . $this->getType() . " " . $this->getName() . " " . $this->getImg() . " " . $this->getCategory() . "" . $this->getSubcategory();
     }
 
 }

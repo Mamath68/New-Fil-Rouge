@@ -12,12 +12,9 @@
     <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <!-- Bootstrap JS -->
-    <link rel="stylesheet" href="public/CSS/maison.css">
-    <link rel="stylesheet" href="public/CSS/smartphone-maison.css">
-    <link rel="stylesheet" href="public/CSS/tablette-maison.css">
-    <!-- <link rel="stylesheet" href="public/CSS/elan.css"> -->
-    <!-- <link rel="stylesheet" href="public/CSS/smartphone.css"> -->
-    <!-- <link rel="stylesheet" href="public/CSS/tablette.css"> -->
+    <link rel="stylesheet" href="public/CSS/style.css">
+    <link rel="stylesheet" href="public/CSS/smartphone.css">
+    <link rel="stylesheet" href="public/CSS/tablette.css">
     <link rel="stylesheet" href="public/tarteaucitron/css/tarteaucitron.css">
     <script src="public/tarteaucitron/tarteaucitron.js"></script>
     <link rel="icon" href="public/img/clé-de-sol.png">
