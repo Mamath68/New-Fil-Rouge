@@ -117,56 +117,56 @@ class InstrumentController extends AbstractController implements ControllerInter
             "view" => VIEW_DIR . "instruments/instruments_à_vents/les_vents.php",
             "data" => [
                 "wind" => $subCatManager->findSubcategoryById($id),
-            ]
-        ];
-    }
-
-    public function mecaInstrument($id)
+                ]
+            ];
+        }
+        
+        public function mecaInstrument($id)
     {
         $instrumentManager = new InstrumentManager();
         return [
             "view" => VIEW_DIR . "instruments/instruments_à_vents/les_mecaniques.php",
             "data" => [
                 "mecanique" => $instrumentManager->findInstrumentById($id),
-            ]
-        ];
-    }
-
-    public function cuivreInstrument($id)
-    {
-        $instrumentManager = new InstrumentManager();
-        return [
-            "view" => VIEW_DIR . "instruments/instruments_à_vents/les_cuivres.php",
-            "data" => [
-                "cuivre" => $instrumentManager->findInstrumentById($id),
-            ]
-        ];
-    }
-
-    public function electronInstrument($id)
-    {
+                ]
+            ];
+        }
+        
+        public function cuivreInstrument($id)
+        {
+            $instrumentManager = new InstrumentManager();
+            return [
+                "view" => VIEW_DIR . "instruments/instruments_à_vents/les_cuivres.php",
+                "data" => [
+                    "cuivre" => $instrumentManager->findInstrumentById($id),
+                    ]
+                ];
+        }
+        
+        public function electronInstrument($id)
+        {
         $instrumentManager = new InstrumentManager();
         return [
             "view" => VIEW_DIR . "instruments/instruments_à_vents/les_electronique.php",
             "data" => [
                 "electronique" => $instrumentManager->findInstrumentById($id),
-            ]
+                ]
         ];
-
+        
     }
-
+    
     public function woodInstrument($id)
     {
         $instrumentManager = new InstrumentManager();
         return [
             "view" => VIEW_DIR . "instruments/instruments_à_vents/les_bois.php",
             "data" => [
-                "bois" => $instrumentManager->findInstrumentById($id),
-            ]
-        ];
-
-    }
-
+                "wood" => $instrumentManager->findInstrumentById($id),
+                ]
+            ];
+            
+        }
+        
     public function cordInstrument($id)
     {
         $subCatManager = new SubCategoryManager();

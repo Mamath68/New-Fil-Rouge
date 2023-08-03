@@ -22,7 +22,7 @@
 </div>
 <br>
 <caption>
-    <p class="text-center caption bg-black">Les électronique</p>
+    <p class="container text-center fs20 text-light bg-black">Les électronique</p>
 </caption>
 <table class="table container">
     <thead>
@@ -33,15 +33,15 @@
     </thead>
     <tbody>
         <tr>
-            <th class="table-dark text-center tableau">EVI 1000 (1987)</th>
+            <th class="text-center tableau">EVI 1000 (1987)</th>
             <td class="text-center"><img src="public/img/evi_1000.jpg" alt="EVI 1000"></td>
         </tr>
         <tr>
-            <th class="table-dark text-center tableau">EWI 1000 (1987)</th>
+            <th class="text-center tableau">EWI 1000 (1987)</th>
             <td class="text-center"><img src="public/img/ew_1000.jpg" alt="EWI 1000"></td>
         </tr>
         <tr>
-            <th class="table-dark text-center tableau">EWI 4000S (2006)</th>
+            <th class="text-center tableau">EWI 4000S (2006)</th>
             <td class="text-center"><img src="public/img/EWI_4000S.jpg" alt="EWI 4000S">
                 <br>
                 <!--lien vers un site externe-->
@@ -49,7 +49,7 @@
             </td>
         </tr>
         <tr>
-            <th class="table-dark text-center tableau">EWI USB (2009)</th>
+            <th class="text-center tableau">EWI USB (2009)</th>
             <td class="text-center"><img src="public/img/EWI_USB.jpg" alt="EWI USB">
                 <br>
                 <a href="https://www.akaipro.com/ewi-usb" target="_blank">Pour
@@ -57,14 +57,14 @@
             </td>
         </tr>
         <tr>
-            <th class="table-dark text-center tableau">EWI5000 (2014)</th>
+            <th class="text-center tableau">EWI5000 (2014)</th>
             <td class="text-center"><img src="public/img/EWI5000.jpg" alt="EWI5000">
                 <br>
                 <a href="https://www.akaipro.com/ewi5000" target="_blank">Pour plus d'informations, cliquez-ICI</a>
             </td>
         </tr>
         <tr>
-            <th class="table-dark text-center tableau">EWI SOLO (Septembre 2020)</th>
+            <th class="text-center tableau">EWI SOLO (Septembre 2020)</th>
             <td class="text-center"><img src="public/img/EWI-SOLO.jpg" alt="EWI SOLO">
                 <br>
                 <a href="https://www.akaipro.com/ewi-solo" target="_blank">Pour

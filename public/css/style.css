@@ -49,11 +49,8 @@ ol img {
 }
 
 /*pour le titre des tableaux*/
-.caption {
-    /*taille police 20pixels*/
+.fs20 {
     font-size: 20px;
-    /*couleur text : blanc*/
-    color: white;
 }
 
 table,

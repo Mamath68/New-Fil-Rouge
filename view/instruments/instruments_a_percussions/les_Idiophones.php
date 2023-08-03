@@ -11,7 +11,7 @@
 </div>
 <br>
 <caption>
-    <p class="text-center caption bg-black">Les idiophones</p>
+    <p class="container text-center fs20 text-light bg-black">Les idiophones</p>
 </caption>
 <table class="table container">
     <thead>
@@ -26,23 +26,23 @@
     <tbody>
         <tr>
             <!--td = Cellule-->
-            <td class="table-dark text-center tableau">Marimba</td>
-            <td class="table-dark text-center tableau">Xilophones</td>
+            <td class="text-center tableau">Marimba</td>
+            <td class="text-center tableau">Xilophones</td>
             <td class="text-center"><img src="public/img/Marimba.png" alt="Marimba"></td>
         </tr>
         <tr>
-            <td class="table-dark text-center tableau">Glockenspiel</td>
-            <td class="table-dark text-center tableau"> Métalophones</td>
+            <td class="text-center tableau">Glockenspiel</td>
+            <td class="text-center tableau"> Métalophones</td>
             <td class="text-center"><img src="public/img/Glockenspiel.png" alt="Glockenspiel"></td>
         </tr>
         <tr>
-            <td class="table-dark text-center tableau">Handpan</td>
-            <td class="table-dark text-center tableau">Metalophone</td>
+            <td class="text-center tableau">Handpan</td>
+            <td class="text-center tableau">Metalophone</td>
             <td class="text-center"><img src="public/img/handpan.png" alt="Handpan"></td>
         </tr>
         <tr>
-            <td class="table-dark text-center tableau">Gong</td>
-            <td class="table-dark text-center tableau">idiophones à 1 note</td>
+            <td class="text-center tableau">Gong</td>
+            <td class="text-center tableau">idiophones à 1 note</td>
             <td colspan="2" class="text-center"><img src="public/img/Gong.png" alt="Gong"></td>
         </tr>
     </tbody>

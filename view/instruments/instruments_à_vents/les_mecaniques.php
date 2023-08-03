@@ -18,7 +18,7 @@
 </div>
 <br>
 <caption>
-    <p class="text-center caption bg-black">Les Mécanique</p>
+    <p class="container text-center fs20 text-light bg-black">Les Mécanique</p>
 </caption>
 <table class="table container">
     <thead>
@@ -29,19 +29,19 @@
     </thead>
     <tbody>
         <tr>
-            <th class="table-dark text-center tableau">Le Limonaire</th>
+            <th class="text-center tableau">Le Limonaire</th>
             <td class="text-center"><img src="public/img/Limonaire.jpg" alt="Limonaires"></td>
         </tr>
         <tr>
-            <th class="table-dark text-center tableau">L'orgue de Barbarie</th>
+            <th class="text-center tableau">L'orgue de Barbarie</th>
             <td class="text-center"><img src="public/img/Orgue-de-barbarie.jpg" alt="Orgue de Barbarie"></td>
         </tr>
         <tr>
-            <th class="table-dark text-center tableau">Serinette</th>
+            <th class="text-center tableau">Serinette</th>
             <td class="text-center"><img src="public/img/Serinette.jpg" alt="Serinette"></td>
         </tr>
         <tr>
-            <th class="table-dark text-center tableau">Orgue Mécanique</th>
+            <th class="text-center tableau">Orgue Mécanique</th>
             <td class="text-center"><img src="public/img/Orgue.png" alt="Orgue"></td>
         </tr>
     </tbody>

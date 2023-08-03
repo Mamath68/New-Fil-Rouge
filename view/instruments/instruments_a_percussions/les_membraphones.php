@@ -19,7 +19,7 @@
 </p>
 <br>
 <caption>
-    <p class="text-center caption bg-black">Les Membraphones</p>
+    <p class="container text-center fs20 text-light bg-black">Les Membraphones</p>
 </caption>
 <table class="table container">
     <thead>
@@ -33,19 +33,19 @@
     <tbody>
         <tr>
             <!--td = Cellule-->
-            <td class="table-dark text-center tableau">Alfaia</td>
+            <td class="text-center tableau">Alfaia</td>
             <td class="text-center"><img src="public/img/Ailfaia.png" alt="Alfaia"></td>
         </tr>
         <tr>
-            <td class="table-dark text-center tableau">Tama</td>
+            <td class="text-center tableau">Tama</td>
             <td class="text-center"><img src="public/img/Tama.png" alt="Tama"></td>
         </tr>
         <tr>
-            <td class="table-dark text-center tableau">Bombo</td>
+            <td class="text-center tableau">Bombo</td>
             <td class="text-center"><img src="public/img/Bombos.png" alt="Bombos"></td>
         </tr>
         <tr>
-            <td class="table-dark text-center tableau">Tam-Tam</td>
+            <td class="text-center tableau">Tam-Tam</td>
             <td class="text-center"><img src="public/img/Tam_tam.png" alt="Tam-Tam"></td>
         </tr>
     </tbody>

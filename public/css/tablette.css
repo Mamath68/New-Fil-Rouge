@@ -43,11 +43,8 @@ img {
     width: 300px;
 }
 /*pour le titre des tableaux*/
-.caption {
-    /*taille police 20pixels*/
+.fs20 {
     font-size: 20px;
-    /*couleur text : blanc*/
-    color: white;
 }
 /*classe complémentaire pour certains tableaux : couleurs blanc crême*/
 .tableau {
@@ -112,11 +109,8 @@ img {
     width: 300px;
 }
 /*pour le titre des tableaux*/
-.caption {
-    /*taille police 20pixels*/
+.fs20 {
     font-size: 20px;
-    /*couleur text : blanc*/
-    color: white;
 }
 /*classe complémentaire pour certains tableaux : couleurs blanc crême*/
 .tableau {

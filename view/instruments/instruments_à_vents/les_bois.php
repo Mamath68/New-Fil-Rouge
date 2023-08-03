@@ -1,5 +1,5 @@
 <?php
-$wood = $result['data']['bois'];
+$wood = $result['data']['wood'];
 ?>
 <div class="container">
     <p>Les bois sont une famille d'instruments de musique à vent qui se caractérisent par leur système d'émission du son
@@ -17,8 +17,9 @@ $wood = $result['data']['bois'];
     </ul>
     </p>
 </div>
+
 <caption>
-    <p class="text-center caption bg-black">Les bois</p>
+    <p class="text-center container fs20 text-light bg-black">Les Bois</p>
 </caption>
 <table class="table container">
     <thead>
@@ -40,7 +41,8 @@ $wood = $result['data']['bois'];
                     <td class="text-center tableau">
                         <?= $bois->getType() ?>
                     </td>
-                    <td class="text-center"><img src="public/img/<?= $bois->getImg() ?>" alt="<?= $bois->getName() ?>"></td>
+                    <td class="text-center"><img src="./../public/img/<?= $bois->getImg() ?>" alt="<?= $bois->getName() ?>">
+                    </td>
                 </tr>
                 <?php
             }

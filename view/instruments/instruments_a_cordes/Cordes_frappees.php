@@ -13,7 +13,7 @@
 </div>
 <br>
 <caption>
-    <p class="text-center caption bg-black">Les cordes frappées</p>
+    <p class="container text-center fs20 text-light bg-black">Les cordes frappées</p>
 </caption>
 
 <table class="table container">
@@ -29,24 +29,24 @@
         <tr>
             <!--td = Cellule
             table-dark = colonne en noir, text-center = text centré-->
-            <th class="table-dark text-center">Hilun hi kôba</th>
-            <th class="table-dark text-center">Afrique</th>
+            <th class="text-center">Hilun hi kôba</th>
+            <th class="text-center">Afrique</th>
             <!--img src = lien vers l'image-->
             <td class="text-center"><img src="public/img/Hilun-hi-kôba.png" alt="Hilun hi kôba"></td>
         </tr>
         <tr>
-            <th class="table-dark text-center">Chapman Stick</th>class="table-dark text-center tableau"
-            <th class="table-dark text-center"> Amérique</th>
+            <th class="text-center">Chapman Stick</th>class="table-dark text-center tableau"
+            <th class="text-center"> Amérique</th>
             <td class="text-center"><img src="public/img/Chapman-Stick.png" alt="Chapman Stick"></td>
         </tr>
         <tr>
-            <th class="table-dark text-center">Yangqin</th>
-            <th class="table-dark text-center">Asie</th>
+            <th class="text-center">Yangqin</th>
+            <th class="text-center">Asie</th>
             <td class="text-center"><img src="public/img/Yangqin.png" alt="Yangqin"></td>
         </tr>
         <tr>
-            <th class="table-dark text-center">Piano</th>
-            <th class="table-dark text-center">Europe</th>
+            <th class="text-center">Piano</th>
+            <th class="text-center">Europe</th>
             <td class="text-center"><img src="public/img/Piano.png" alt="Piano"></td>
         </tr>
     </tbody>

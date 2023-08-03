@@ -1,3 +1,6 @@
+<?php
+$wood = $result['data']['bois'];
+?>
 <div class="container">
     <p> La famille des cuivres regroupe des instruments à vent dont le son est produit grâce
         à l’air qui est à l’intérieur du l’instrument.
@@ -32,7 +35,7 @@
 </div>
 <br>
 <caption>
-    <p class="text-center caption bg-black">Les Cuivres</p>
+    <p class="container text-center fs20 text-light bg-black">Les Cuivres</p>
 </caption>
 <table class="table container">
     <thead>
@@ -43,23 +46,23 @@
     </thead>
     <tbody>
         <tr>
-            <th class="table-dark text-center tableau">La Trompette (en métal)</th>
+            <th class="text-center tableau">La Trompette (en métal)</th>
             <td class="text-center"><img src="public/img/Trompette.png" alt="Trompette"></td>
         </tr>
         <tr>
-            <th class="table-dark text-center tableau">Cimbasso</th>
+            <th class="text-center tableau">Cimbasso</th>
             <td class="text-center"><img src="public/img/cimbasso.png" alt="Cimbasso"></td>
         </tr>
         <tr>
-            <th class="table-dark text-center tableau">Le Didgeridoo (Bois)</th>
+            <th class="text-center tableau">Le Didgeridoo (Bois)</th>
             <td class="text-center"><img src="public/img/didgeridoo.png" alt="Didgeridoo"></td>
         </tr>
         <tr>
-            <th class="table-dark text-center tableau">L'Olifant (Ivoire)</th>
+            <th class="text-center tableau">L'Olifant (Ivoire)</th>
             <td class="text-center"><img src="public/img/Olifant.png" alt="Olifan"></td>
         </tr>
         <tr>
-            <th class="table-dark text-center tableau">Cor de chasse</th>
+            <th class="text-center tableau">Cor de chasse</th>
             <td class="text-center"><img src="public/img/Cor-de-chasse.png" alt="Cor de chasse"></td>
         </tr>
     </tbody>
