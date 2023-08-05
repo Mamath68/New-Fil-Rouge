@@ -1,4 +1,6 @@
-
+<?php
+$frappes = $result['data']['frappe'];
+?>
 <div class="container">
     <p>Nous allons maintant passer aux instruments à cordes frappées</p>
     <br>
@@ -21,34 +23,34 @@
     <thead>
         <tr class="table-dark text-center tableau">
             <th scope="col">Instruments</th>
-            <th scope="col">Type d'instrument</th>
+            <th scope="col">Continents</th>
             <th scope="col">Images</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <!--td = Cellule
-            table-dark = colonne en noir, text-center = text centré-->
-            <th class="text-center">Hilun hi kôba</th>
-            <th class="text-center">Afrique</th>
-            <!--img src = lien vers l'image-->
-            <td class="text-center"><img src="public/img/Hilun-hi-kôba.png" alt="Hilun hi kôba"></td>
-        </tr>
-        <tr>
-            <th class="text-center">Chapman Stick</th>class="table-dark text-center tableau"
-            <th class="text-center"> Amérique</th>
-            <td class="text-center"><img src="public/img/Chapman-Stick.png" alt="Chapman Stick"></td>
-        </tr>
-        <tr>
-            <th class="text-center">Yangqin</th>
-            <th class="text-center">Asie</th>
-            <td class="text-center"><img src="public/img/Yangqin.png" alt="Yangqin"></td>
-        </tr>
-        <tr>
-            <th class="text-center">Piano</th>
-            <th class="text-center">Europe</th>
-            <td class="text-center"><img src="public/img/Piano.png" alt="Piano"></td>
-        </tr>
+        <?php
+        foreach ($frappes as $frappe) {
+            ?>
+            <tr>
+                <td class="text-center tableau">
+                    <?= $frappe->getName() ?>
+                </td>
+                <td class="text-center tableau">
+                    <?php
+                    if ($frappe->getType()) {
+                        echo $frappe->getType();
+                    } else {
+                        echo "Pas d'informations supplémentaires";
+                    }
+                    ?>
+                </td>
+                <td class="text-center"><img src="public/img/<?= $frappe->getImg() ?>"
+                        alt="<?= $frappe->getName() ?>">
+                </td>
+            </tr>
+            <?php
+        }
+        ?>
     </tbody>
 
 
@@ -56,4 +58,4 @@
 
 <?php
 $title = "Les Cordes Frappées"
-?>
+    ?>

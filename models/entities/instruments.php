@@ -54,7 +54,7 @@ final class Instruments extends Entity
         return $this->img;
     }
 
-    public function setImage($img)
+    public function setImg($img)
     {
         $this->img = $img;
     }

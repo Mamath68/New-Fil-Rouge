@@ -117,44 +117,44 @@ class InstrumentController extends AbstractController implements ControllerInter
             "view" => VIEW_DIR . "instruments/instruments_à_vents/les_vents.php",
             "data" => [
                 "wind" => $subCatManager->findSubcategoryById($id),
-                ]
-            ];
-        }
-        
-        public function mecaInstrument($id)
+            ]
+        ];
+    }
+
+    public function mecaInstrument($id)
     {
         $instrumentManager = new InstrumentManager();
         return [
             "view" => VIEW_DIR . "instruments/instruments_à_vents/les_mecaniques.php",
             "data" => [
                 "mecanique" => $instrumentManager->findInstrumentById($id),
-                ]
-            ];
-        }
-        
-        public function cuivreInstrument($id)
-        {
-            $instrumentManager = new InstrumentManager();
-            return [
-                "view" => VIEW_DIR . "instruments/instruments_à_vents/les_cuivres.php",
-                "data" => [
-                    "cuivre" => $instrumentManager->findInstrumentById($id),
-                    ]
-                ];
-        }
-        
-        public function electronInstrument($id)
-        {
+            ]
+        ];
+    }
+
+    public function cuivreInstrument($id)
+    {
+        $instrumentManager = new InstrumentManager();
+        return [
+            "view" => VIEW_DIR . "instruments/instruments_à_vents/les_cuivres.php",
+            "data" => [
+                "cuivre" => $instrumentManager->findInstrumentById($id),
+            ]
+        ];
+    }
+
+    public function electronInstrument($id)
+    {
         $instrumentManager = new InstrumentManager();
         return [
             "view" => VIEW_DIR . "instruments/instruments_à_vents/les_electronique.php",
             "data" => [
                 "electronique" => $instrumentManager->findInstrumentById($id),
-                ]
+            ]
         ];
-        
+
     }
-    
+
     public function woodInstrument($id)
     {
         $instrumentManager = new InstrumentManager();
@@ -162,11 +162,11 @@ class InstrumentController extends AbstractController implements ControllerInter
             "view" => VIEW_DIR . "instruments/instruments_à_vents/les_bois.php",
             "data" => [
                 "wood" => $instrumentManager->findInstrumentById($id),
-                ]
-            ];
-            
-        }
-        
+            ]
+        ];
+
+    }
+
     public function cordInstrument($id)
     {
         $subCatManager = new SubCategoryManager();
@@ -178,24 +178,36 @@ class InstrumentController extends AbstractController implements ControllerInter
         ];
     }
 
-    public function frapInstrument()
+    public function frapInstrument($id)
     {
+        $instrumentManager = new InstrumentManager();
         return [
             "view" => VIEW_DIR . "instruments/instruments_a_cordes/cordes_frappees.php",
+            "data" => [
+                "frappe" => $instrumentManager->findInstrumentById($id),
+            ]
         ];
     }
 
-    public function frotInstrument()
+    public function frotInstrument($id)
     {
+        $instrumentManager = new InstrumentManager();
         return [
             "view" => VIEW_DIR . "instruments/instruments_a_cordes/cordes_frottees.php",
+            "data" => [
+                "frotte" => $instrumentManager->findInstrumentById($id),
+            ]
         ];
     }
 
-    public function pinceInstrument()
+    public function pinceInstrument($id)
     {
+        $instrumentManager = new InstrumentManager();
         return [
-            "view" => VIEW_DIR . "instruments/instruments_a_cordes/cordes_pincees.php",
+            "view" => VIEW_DIR . "instruments/instruments_a_cordes/cordes_pinces.php",
+            "data" => [
+                "pince" => $instrumentManager->findInstrumentById($id),
+            ]
         ];
     }
     public function strikInstrument($id)
@@ -209,24 +221,36 @@ class InstrumentController extends AbstractController implements ControllerInter
         ];
     }
 
-    public function electroInstrument()
+    public function electroInstrument($id)
     {
+        $instrumentManager = new InstrumentManager();
         return [
             "view" => VIEW_DIR . "instruments/instruments_a_percussions/les_electrophones.php",
+            "data" => [
+                "electrophone" => $instrumentManager->findInstrumentById($id),
+            ]
         ];
     }
 
-    public function idioInstrument()
+    public function idioInstrument($id)
     {
+        $instrumentManager = new InstrumentManager();
         return [
             "view" => VIEW_DIR . "instruments/instruments_a_percussions/les_idiophones.php",
+            "data" => [
+                "idiophone" => $instrumentManager->findInstrumentById($id),
+            ]
         ];
     }
 
-    public function membraInstrument()
+    public function membraInstrument($id)
     {
+        $instrumentManager = new InstrumentManager();
         return [
             "view" => VIEW_DIR . "instruments/instruments_a_percussions/les_membraphones.php",
+            "data" => [
+                "membraphone" => $instrumentManager->findInstrumentById($id),
+            ]
         ];
     }
 }

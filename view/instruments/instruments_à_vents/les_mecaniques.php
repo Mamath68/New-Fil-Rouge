@@ -1,3 +1,6 @@
+<?php
+$mecaniques = $result['data']['mecanique'];
+?>
 <div class="container">
     <p>Les instruments de musique mécanique permettent de jouer la musique contenue sur un support. Celui-ci peut être
         de nombreuses natures, en voici les principales :</p>
@@ -18,7 +21,7 @@
 </div>
 <br>
 <caption>
-    <p class="container text-center fs20 text-light bg-black">Les Mécanique</p>
+    <p class="container text-center fs20 text-light bg-black">Les Mécaniques</p>
 </caption>
 <table class="table container">
     <thead>
@@ -28,22 +31,19 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th class="text-center tableau">Le Limonaire</th>
-            <td class="text-center"><img src="public/img/Limonaire.jpg" alt="Limonaires"></td>
-        </tr>
-        <tr>
-            <th class="text-center tableau">L'orgue de Barbarie</th>
-            <td class="text-center"><img src="public/img/Orgue-de-barbarie.jpg" alt="Orgue de Barbarie"></td>
-        </tr>
-        <tr>
-            <th class="text-center tableau">Serinette</th>
-            <td class="text-center"><img src="public/img/Serinette.jpg" alt="Serinette"></td>
-        </tr>
-        <tr>
-            <th class="text-center tableau">Orgue Mécanique</th>
-            <td class="text-center"><img src="public/img/Orgue.png" alt="Orgue"></td>
-        </tr>
+    <?php
+        foreach ($mecaniques as $mecanique) {
+            ?>
+            <tr>
+                <td class="text-center tableau">
+                    <?= $mecanique->getName() ?>
+                </td>
+                <td class="text-center"><img src="public/img/<?= $mecanique->getImg() ?>" alt="<?= $mecanique->getName() ?>">
+                </td>
+            </tr>
+            <?php
+        }
+        ?>
     </tbody>
 </table>
 

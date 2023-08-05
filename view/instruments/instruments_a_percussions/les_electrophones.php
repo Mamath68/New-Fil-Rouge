@@ -1,6 +1,8 @@
-
+<?php
+$electrophones = $result['data']['electrophone'];
+?>
 <caption>
-    <p class="container text-center fs20 text-light bg-black">Les électrophones</p>
+    <p class="container text-center fs20 text-light bg-black">Les Électrophones</p>
 </caption>
 <table class="table container">
     <thead>
@@ -11,26 +13,24 @@
             <th scope="col">Images</th>
         </tr>
     </thead>
-
-    <tr>
-        <!--td = Cellule-->
-        <td class="text-center tableau">Piano électrique</td>
-        <td class="text-center"><img src="public/img/Piano-électrique.png" alt="Piano électrique"></td>
-    </tr>
-    <tr>
-        <td class="text-center tableau">Synthétiseur</td>
-        <td class="text-center"><img src="public/img/Synthé.png" alt="Synthétiseur"></td>
-    </tr>
-    <tr>
-        <td class="text-center tableau">Boite à rythme</td>
-        <td class="text-center"><img src="public/img/Boite-à-rythme.png" alt="Boite à rythme"></td>
-    </tr>
-    <tr>
-        <td class="text-center tableau">Orgue électronique</td>
-        <td class="text-center"><img src="public/img/Orgue-elec.png" alt="Orgue électronique"></td>
-    </tr>
+    <tbody>
+        <?php
+        foreach ($electrophones as $electrophone) {
+            ?>
+            <tr>
+                <td class="text-center tableau">
+                    <?= $electrophone->getName() ?>
+                </td>
+                <td class="text-center"><img src="public/img/<?= $electrophone->getImg() ?>"
+                        alt="<?= $electrophone->getName() ?>">
+                </td>
+            </tr>
+            <?php
+        }
+        ?>
+    </tbody>
 </table>
 
 <?php
-$title = "Les Electrophones";
+$title = "Les Électrophones";
 ?>

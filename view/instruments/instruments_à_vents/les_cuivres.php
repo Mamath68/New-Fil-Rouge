@@ -1,5 +1,5 @@
 <?php
-$wood = $result['data']['bois'];
+$cuivres = $result['data']['cuivre'];
 ?>
 <div class="container">
     <p> La famille des cuivres regroupe des instruments à vent dont le son est produit grâce
@@ -45,26 +45,19 @@ $wood = $result['data']['bois'];
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th class="text-center tableau">La Trompette (en métal)</th>
-            <td class="text-center"><img src="public/img/Trompette.png" alt="Trompette"></td>
-        </tr>
-        <tr>
-            <th class="text-center tableau">Cimbasso</th>
-            <td class="text-center"><img src="public/img/cimbasso.png" alt="Cimbasso"></td>
-        </tr>
-        <tr>
-            <th class="text-center tableau">Le Didgeridoo (Bois)</th>
-            <td class="text-center"><img src="public/img/didgeridoo.png" alt="Didgeridoo"></td>
-        </tr>
-        <tr>
-            <th class="text-center tableau">L'Olifant (Ivoire)</th>
-            <td class="text-center"><img src="public/img/Olifant.png" alt="Olifan"></td>
-        </tr>
-        <tr>
-            <th class="text-center tableau">Cor de chasse</th>
-            <td class="text-center"><img src="public/img/Cor-de-chasse.png" alt="Cor de chasse"></td>
-        </tr>
+        <?php
+        foreach ($cuivres as $cuivre) {
+            ?>
+            <tr>
+                <td class="text-center tableau">
+                    <?= $cuivre->getName() ?>
+                </td>
+                <td class="text-center"><img src="public/img/<?= $cuivre->getImg() ?>" alt="<?= $cuivre->getName() ?>">
+                </td>
+            </tr>
+            <?php
+        }
+        ?>
     </tbody>
 </table>
 

@@ -31,19 +31,14 @@
             <td class="text-center"><img src="public/img/Marimba.png" alt="Marimba"></td>
         </tr>
         <tr>
-            <td class="text-center tableau">Glockenspiel</td>
-            <td class="text-center tableau"> Métalophones</td>
-            <td class="text-center"><img src="public/img/Glockenspiel.png" alt="Glockenspiel"></td>
-        </tr>
-        <tr>
             <td class="text-center tableau">Handpan</td>
-            <td class="text-center tableau">Metalophone</td>
+            <td class="text-center tableau">Métalophone</td>
             <td class="text-center"><img src="public/img/handpan.png" alt="Handpan"></td>
         </tr>
         <tr>
             <td class="text-center tableau">Gong</td>
             <td class="text-center tableau">idiophones à 1 note</td>
-            <td colspan="2" class="text-center"><img src="public/img/Gong.png" alt="Gong"></td>
+            <td class="text-center"><img src="public/img/Gong.png" alt="Gong"></td>
         </tr>
     </tbody>
 

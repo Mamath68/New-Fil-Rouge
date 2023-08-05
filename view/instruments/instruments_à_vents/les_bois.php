@@ -31,24 +31,18 @@ $wood = $result['data']['wood'];
     </thead>
     <tbody>
         <?php
-        if (isset($wood)) {
-            foreach ($wood as $bois) {
-                ?>
-                <tr>
-                    <td class="text-center tableau">
-                        <?= $bois->getName() ?>
-                    </td>
-                    <td class="text-center tableau">
-                        <?= $bois->getType() ?>
-                    </td>
-                    <td class="text-center"><img src="./../public/img/<?= $bois->getImg() ?>" alt="<?= $bois->getName() ?>">
-                    </td>
-                </tr>
-                <?php
-            }
-        } else {
+        foreach ($wood as $bois) {
             ?>
-            <h2>Pas d'instruments ici!</h2>
+            <tr>
+                <td class="text-center tableau">
+                    <?= $bois->getName() ?>
+                </td>
+                <td class="text-center tableau">
+                    <?= $bois->getType() ?>
+                </td>
+                <td class="text-center"><img src="public/img/<?= $bois->getImg() ?>" alt="<?= $bois->getName() ?>">
+                </td>
+            </tr>
             <?php
         }
         ?>

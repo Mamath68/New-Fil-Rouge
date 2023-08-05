@@ -1,6 +1,8 @@
-
+<?php
+$frottes = $result['data']['frotte'];
+?>
 <div class="container">
-<p>Nous allons maintant passer aux instruments à cordes frappées</p>
+    <p>Nous allons maintant passer aux instruments à cordes frappées</p>
 </div>
 
 <caption>
@@ -16,23 +18,19 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <!--td = Cellule-->
-            <td class="text-center tableau">Alto</td>
-            <td class="text-center"><img src="public/img/Alto.png" alt="Alto"></td>
-        </tr>
-        <tr>
-            <td class="text-center tableau">Arpeggione</td>
-            <td class="text-center"><img src="public/img/Arpeggione.png" alt="Arpeggione"></td>
-        </tr>
-        <tr>
-            <td class="text-center tableau">Contrebasse</td>
-            <td class="text-center"><img src="public/img/Contrebasse.png" alt="Contrebasse"></td>
-        </tr>
-        <tr>
-            <td class="text-center tableau">Violon</td>
-            <td class="text-center"><img src="public/img/Violon.png" alt="Violon"></td>
-        </tr>
+        <?php
+        foreach ($frottes as $frotte) {
+            ?>
+            <tr>
+                <td class="text-center tableau">
+                    <?= $frotte->getName() ?>
+                </td>
+                <td class="text-center"><img src="public/img/<?= $frotte->getImg() ?>" alt="<?= $frotte->getName() ?>">
+                </td>
+            </tr>
+            <?php
+        }
+        ?>
     </tbody>
 </table>
 
