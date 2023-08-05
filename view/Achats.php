@@ -1,51 +1,8 @@
 <?php
-/*$strRqArticle = "SELECT * FROM articles";*/
-$strPage = "article";
-
-//intCat = catégories en integral
-$intCat = $_POST['cat'] ?? '';
-//strLib = Libéllé en strings
-$strLib = $_POST['lib'] ?? '';
-//boolstock = stock en boolean, oui ou non, 1 ou 0
-$boolStock = $_POST['stock'] ?? 1;
-
-//$strRqArticle 	= "SELECT * FROM articles" = selectionné Tout de la table articles;
-$strRqArticle = "SELECT * 
-						FROM articles
-						/* ajout proid=provider_id(id fournisseur)de la table provider(fournisseur) */
-							INNER JOIN provider ON articles_proid = provider_id";
-//strwhere = where = remplacement du where par $strwhere
-$strWhere = " WHERE";
-// Recherche par catégorie
-//if = requete, verificatin, si c'est comme ça, alors ça, sinon, autre chose
-if ($intCat != '') {
-	$strRqArticle .= $strWhere . " articles_cat = " . $intCat;
-	$strWhere = " AND ";
-}
-// Recherche par libellé
-if ($strLib != '') {
-	$strRqArticle .= $strWhere . " articles_lib LIKE '%" . $strLib . "%'";
-	$strWhere = " AND ";
-}
-// Recherche par stock
-if ($boolStock == 1) {
-	$strRqArticle .= $strWhere . " articles_stock > 0";
-} else {
-	$strRqArticle .= $strWhere . " articles_stock < 1";
-}
-
-$strRqArticle .= " ORDER BY articles_proid ";
-//echo $strRqArticle;
-$arrArticles = $db->query($strRqArticle)->fetchAll();
-
-
-// Liste des catégories disponibles en bdd
-$strRqCat = "SELECT DISTINCT articles_cat FROM articles;";
-//arrcat = array = tableau
-$arrCat = $db->query($strRqCat)->fetchAll();
+$articles = $result['data']['articles'];
+$category = $result['data']['category'];
 ?>
-
-<h2>Liste des articles</h2>
+<h2>Bienvenu dans la boutique à Mathieu</h2>
 
 
 <div class="card">
@@ -54,28 +11,18 @@ $arrCat = $db->query($strRqCat)->fetchAll();
 	</div>
 	<div class="card-body">
 		<!--form = formulaire-->
-		<form action="" method="post">
+		<form action="inde.php?ctrl=Article&action=findByCategory" method="post">
 			<div class="row mb-3">
 				<!--label for = choix-->
-				<label for="cat" class="col-sm-2 col-form-label">Catégories</label>
+				<label for="category" class="col-sm-2 col-form-label">Catégories</label>
 				<div class="col-sm-10">
 					<!--select = selectionner une catégorie-->
-					<select class="form-select" id="cat" name="cat">
-						<!--option = choix des catégories-->
-						<option <?php if ($intCat == '') {
-							echo "Selected";
-							//value="" = valeur
-						} ?> value=""> -- </option>
-						<!--foreach = pour chacun-->
-						<?php foreach ($arrCat as $arrDetCat) {
-							?>
-							<option <?php if ($intCat == $arrDetCat['articles_cat']) {
-								echo "Selected";
-							} ?> value="<?php echo $arrDetCat['articles_cat']; ?>">
-								<?php echo $arrDetCat['articles_cat']; ?>
-							</option>
-							<?php
-						} ?>
+					<select name="id_category">
+						<option value=" ">Categorie</option>
+						<?php foreach ($category as $categorie) { ?>
+							<option value="<?= $categorie->getId() ?> "><?= $categorie->getLibelle() ?></option>
+						<?php }
+						?>
 					</select>
 				</div>
 			</div>
@@ -83,7 +30,7 @@ $arrCat = $db->query($strRqCat)->fetchAll();
 			<div class="row mb-3">
 				<label for="lib" class="col-sm-2 col-form-label">Libellé</label>
 				<div class="col-sm-10">
-					<input id="lib" class="form-control" type="text" name="lib" value="<?php echo $strLib; ?>" />
+					<input id="lib" class="form-control" type="text" name="libelle" placeholder="Libelle">
 				</div>
 			</div>
 
@@ -122,7 +69,7 @@ $arrCat = $db->query($strRqCat)->fetchAll();
 			<th>Fournisseur</th>
 			<th>Image</th>
 			<th>Prix vente</th>
-			<th>Quantité en stock</th>
+			<th>Stock</th>
 			<th>Catégorie</th>
 
 		</tr>
@@ -130,7 +77,7 @@ $arrCat = $db->query($strRqCat)->fetchAll();
 	<tbody>
 		<?php
 		//var_dump($arrArticles);
-		foreach ($arrArticles as $arrDetArticle) {
+		foreach ($articles as $article) {
 			?>
 			<tr>
 				<!--colonne-->
@@ -141,7 +88,7 @@ $arrCat = $db->query($strRqCat)->fetchAll();
 					<?= $arrDetArticle['provider_name'] ?>
 				</td>
 				<td>
-					<img src="public/img/Instruments/<?= $arrDetArticle['articles_img'] ?>">
+					<img src="public/img/articles/<?= $arrDetArticle['articles_img'] ?>">
 					<?= $arrDetArticle['articles_img'] ?>
 				</td>
 				<td>

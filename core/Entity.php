@@ -20,7 +20,7 @@ abstract class Entity
                 $man = new $FQCName();
                 $value = $man->findOneById($value);
             }
-            //fabrication du nom du setter à Coreeler (ex: setMarque)
+            //fabrication du nom du setter à Appeler (ex: setMarque)
             $method = "set" . ucfirst($fieldArray[0]);
 
             if (method_exists($this, $method)) {

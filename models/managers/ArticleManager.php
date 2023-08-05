@@ -16,14 +16,27 @@ class ArticleManager extends Manager
         parent::connect();
     }
 
+    public function findArticle()
+    {
+        $sql = "SELECT  a.articles_id, a.libelle, a.img, a.stock, a.sellprice, p.id_provider, p.name
+        FROM " . $this->tableName . " a
+        INNER JOIN category c 
+        ON c.id_category = a.category_id
+        INNER JOIN providers p 
+        ON p.id_provider = a.provider_id";
+
+        return $this->getMultipleResults(
+            DAO::select($sql),
+            $this->className
+        );
+    }
     public function findArticlesByCategory($id)
     {
         $sql = "SELECT *
         FROM " . $this->tableName . " a
         INNER JOIN category c
         ON c.id_category = a.category_id
-        WHERE c.id_category = :id
-        ORDER BY a.provider_id";
+        WHERE c.id_category = :id";
 
         return $this->getMultipleResults(
             DAO::select($sql, ['id' => $id], true),
@@ -36,23 +49,22 @@ class ArticleManager extends Manager
         FROM " . $this->tableName . " a
         INNER JOIN category c
         ON c.id_category = a.category_id
-        WHERE a.libelle LIKE '%piano%'
-        ORDER BY a.provider_id";
+        WHERE a.libelle LIKE :libelle";
 
         return $this->getMultipleResults(
             DAO::select($sql, ['libelle' => $libelle], true),
             $this->className
         );
     }
-    public function findArticlesByStock($id)
-    {
-        $sql = "SELECT a.id_anime,a.animeName,a.img, a.histoire
-        FROM " . $this->tableName . " a
-        WHERE a.id_anime = :id";
+    // public function findArticlesByStock($id)
+    // {
+    //     $sql = "SELECT *
+    //     FROM " . $this->tableName . " a
+    //     WHERE a.id_anime = :id";
 
-        return $this->getMultipleResults(
-            DAO::select($sql, ['id' => $id], true),
-            $this->className
-        );
-    }
+    //     return $this->getMultipleResults(
+    //         DAO::select($sql, ['id' => $id], true),
+    //         $this->className
+    //     );
+    // }
 }

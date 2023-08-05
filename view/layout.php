@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" href="index.php?ctrl=Instrument&action=presentation">Présentation</a>
-                        <a class="nav-link" href="#">Achat</a>
+                        <a class="nav-link" href="index.php?ctrl=Article&action=findAllArticle">Boutique</a>
                     </div>
                 </div>
             </div>

@@ -20,7 +20,25 @@ class ArticleController extends AbstractController implements ControllerInterfac
     }
     public function findAllArticle()
     {
+        $articleManager = new ArticleManager();
 
+        return [
+            "view" => VIEW_DIR . "Achats.php",
+            "data" => [
+                "articles" => $articleManager->findArticle(),
+            ]
+        ];
+    }
+    public function findByCategory($id)
+    {
+        $articleManager = new ArticleManager();
+
+        return [
+            "view" => VIEW_DIR . "Achats.php",
+            "data" => [
+                "category" => $articleManager->findArticlesByCategory($id),
+            ]
+        ];
     }
 
 }

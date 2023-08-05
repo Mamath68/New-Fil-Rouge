@@ -1,11 +1,12 @@
-
-<br>
+<?php
+$idiophones = $result['data']['idiophone'];
+?>
 <div class="container">
     <p>Les idiophones sont classé en plusieurs catégories :
     <ol class="instruments">
         <li class="new-font">Les Xilophones</li>
         <li class="new-font">Les Métalophones</li>
-        <li class="new-font">Les idiophones à 1 note</li>
+        <li class="new-font">Les Idiophones à 1 note</li>
     </ol>
     </p>
 </div>
@@ -24,26 +25,32 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <!--td = Cellule-->
-            <td class="text-center tableau">Marimba</td>
-            <td class="text-center tableau">Xilophones</td>
-            <td class="text-center"><img src="public/img/Marimba.png" alt="Marimba"></td>
-        </tr>
-        <tr>
-            <td class="text-center tableau">Handpan</td>
-            <td class="text-center tableau">Métalophone</td>
-            <td class="text-center"><img src="public/img/handpan.png" alt="Handpan"></td>
-        </tr>
-        <tr>
-            <td class="text-center tableau">Gong</td>
-            <td class="text-center tableau">idiophones à 1 note</td>
-            <td class="text-center"><img src="public/img/Gong.png" alt="Gong"></td>
-        </tr>
+        <?php
+        foreach ($idiophones as $idiophone) {
+            ?>
+            <tr>
+                <td class="text-center tableau">
+                    <?= $idiophone->getName() ?>
+                </td>
+                <td class="text-center tableau">
+                    <?php
+                    if ($idiophone->getType()) {
+                        echo $idiophone->getType();
+                    } else {
+                        echo "Pas d'informations supplémentaires";
+                    }
+                    ?>
+                </td>
+                <td class="text-center"><img src="public/img/<?= $idiophone->getImg() ?>" alt="<?= $idiophone->getName() ?>">
+                </td>
+            </tr>
+            <?php
+        }
+        ?>
     </tbody>
 
 </table>
 
-<?php 
+<?php
 $title = "Les idiophones";
 ?>
